@@ -21,5 +21,6 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import { PopupModal } from './PopupModal.vue'
 </script>
 
