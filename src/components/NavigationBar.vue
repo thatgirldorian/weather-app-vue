@@ -11,6 +11,10 @@
             <i class="fa-solid fa-circle-info text-xl hover:text-secondary-color duration-150 cursor-pointer"></i>
             <i class="fa-solid fa-plus text-xl hover:text-secondary-color duration-150 cursor-pointer"></i>
         </div>
+
+        <PopupModal>
+            <h1>HIII</h1>
+        </PopupModal>
         </nav>
     </header>
 </template>
