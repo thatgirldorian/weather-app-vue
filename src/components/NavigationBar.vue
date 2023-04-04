@@ -8,11 +8,16 @@
             </div>
            </RouterLink>
            <div class="flex gap-3 flex-1 justify-end">
-            <i class="fa-solid fa-circle-info text-xl hover:text-secondary-color duration-150 cursor-pointer"></i>
+            <i class="fa-solid fa-circle-info text-xl hover:text-secondary-color duration-150 cursor-pointer"
+            @click="toggleModal"
+            ></i>
             <i class="fa-solid fa-plus text-xl hover:text-secondary-color duration-150 cursor-pointer"></i>
         </div>
 
-        <PopupModal>
+        <PopupModal 
+        :modal-active="modalActive"
+        @close-modal="toggleModal"
+        >
             <div class="text-black">
           <h1 class="text-2xl mb-1">Overview</h1>
           <p class="mb-4">
@@ -43,7 +48,13 @@
 </template>
 
 <script setup>
+import { ref } from "vue"
 import { RouterLink } from 'vue-router';
 import  PopupModal from './PopupModal.vue'
+
+const modalActive = ref(null);
+const toggleModal = () => {
+    modalActive.value = !modalActive.value;
+}
 </script>
 
