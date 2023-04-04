@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "primary-color": "#00668A",
-        "secondary-color": "#004E71",
+        "primary-color": "#1d3557",
+        "secondary-color": "#a8dadc",
       },
     },
     fontFamily: {
