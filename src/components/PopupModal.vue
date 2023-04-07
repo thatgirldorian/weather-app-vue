@@ -1,20 +1,23 @@
 <template>
-    <Transition name="modal-outer">
+    <Teleport to="body">
+        <Transition name="modal-outer">
         <div 
     v-show="modalActive"
     class="absolute w-full bg-opacity-30 h-screen top-0 left-0 flex justify-center px-8">
        <Transition name="modal-inner">
         <div  
         v-if="modalActive"
-        class="p-4 bg-secondary-color self-start mt-32 max-w-screen-md">
+        class="p-4 bg-secondary-color self-start mt-32 max-w-screen-md rounded-md">
             <slot />
-            <button class="text-white rounded-full mt-8 bg-primary-color py-2 px-6"
+            <button class="text-white rounded-md mt-8 bg-primary-color py-2 px-6"
             @click="$emit('close-modal')"
             >Close</button>
         </div>
        </Transition>
     </div>
     </Transition>
+    </Teleport>
+    
 </template>
 
 <script setup>
@@ -53,7 +56,5 @@ defineProps({
     opacity: 0;
     transform: scale(0.8);
 }
-
-
 </style>
 
