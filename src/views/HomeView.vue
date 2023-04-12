@@ -16,4 +16,8 @@
 import { ref } from "vue"
 
 const searchQuery = ref("")
+const queryTimeout = ref(null)
+const getSearchResults = () => {
+
+}
 </script>
